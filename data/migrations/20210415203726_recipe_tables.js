@@ -4,7 +4,7 @@ exports.up = function(knex) {
   .createTable("recipes", tbl =>{
       tbl.increments("recipe_id") //primary key
       tbl.string("recipe_name", 128).notNullable().unique() //required, must be unique
-      tbl.timestamps() //adds created_at and updated_at columns
+      tbl.timestamps(true, true) //adds created_at and updated_at columns (usetimestamp, defaulttonow)
   })
   .createTable("ingredients", tbl =>{
     tbl.increments("ingredient_id")
