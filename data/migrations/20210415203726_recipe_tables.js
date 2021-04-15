@@ -3,7 +3,8 @@ exports.up = function(knex) {
   return knex.schema
   .createTable("recipes", tbl =>{
       tbl.increments("recipe_id") //primary key
-      tbl.string("recipe_name", 128).notNullable() //required
+      tbl.string("recipe_name", 128).notNullable().unique() //required, must be unique
+      tbl.timestamps() //adds created_at and updated_at columns
   })
   .createTable("ingredients", tbl =>{
     tbl.increments("ingredient_id")
