@@ -4,8 +4,6 @@ exports.seed = function(knex){
         { ingredient_name: "mustard"},
         { ingredient_name: "olive oil"},
         { ingredient_name: "hotdog"},
-        { ingredient_name: "playdoh"},
-        { ingredient_name: "oven"},
-        { ingredient_name: "speech"}
+        { ingredient_name: "playdoh"}
     ])
 }

@@ -8,7 +8,7 @@ exports.up = function(knex) {
   })
   .createTable("ingredients", tbl =>{
     tbl.increments("ingredient_id")
-    tbl.string("ingredient_name", 128).notNullable()
+    tbl.string("ingredient_name", 128) //can be null
   })
   .createTable("steps", tbl =>{
       tbl.increments("step_id")
@@ -35,7 +35,7 @@ exports.up = function(knex) {
       //foreign key
       tbl.integer("ingredient_id")
         .unsigned()
-        .notNullable()
+        //can be null
         .references("ingredient_id")
         .inTable("ingredients")
         .onDelete("RESTRICT")

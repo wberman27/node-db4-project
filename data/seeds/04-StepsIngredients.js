@@ -5,7 +5,7 @@ exports.seed = function(knex){
         { quantity: 5, step_id: 3, ingredient_id: 2},
         { quantity: 12, step_id: 4, ingredient_id: 1},
         { quantity: 20, step_id: 5, ingredient_id: 5},
-        { quantity: 35, step_id: 6, ingredient_id: 6},
-        { quantity: 50, step_id: 7, ingredient_id: 7}
+        { quantity: 35, step_id: 6},
+        { quantity: 50, step_id: 7}
     ])
 }
